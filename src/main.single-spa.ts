@@ -1,14 +1,16 @@
-import { enableProdMode, NgZone } from '@angular/core';
+import './set-public-path';
 
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { Router, NavigationStart } from '@angular/router';
+import {enableProdMode, NgZone} from '@angular/core';
 
-import { singleSpaAngular, getSingleSpaExtraProviders } from 'single-spa-angular';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {Router, NavigationStart} from '@angular/router';
+
+import {singleSpaAngular, getSingleSpaExtraProviders} from 'single-spa-angular';
 
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
-import { singleSpaPropsSubject } from './single-spa/single-spa-props';
+import {AppModule} from './app/app.module';
+import {environment} from './environments/environment';
+import {singleSpaPropsSubject} from './single-spa/single-spa-props';
 
 if (environment.production) {
   enableProdMode();
